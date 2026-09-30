@@ -1,0 +1,19 @@
+{
+  "name": "my-games",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "workspaces": [
+    "landing",
+    "blink-and-draw"
+  ],
+  "scripts": {
+    "dev": "concurrently -n landing,blink -c yellow,cyan \"npm run dev -w landing\" \"npm run dev -w blink-and-draw\"",
+    "build": "npm run build -w landing && npm run build -w blink-and-draw",
+    "preview": "vite preview --outDir dist --port 4173"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.5",
+    "vite": "^8.3.1"
+  }
+}
