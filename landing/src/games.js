@@ -34,6 +34,17 @@ export const GAMES = [
     path: '/blink-and-draw/',
     devUrl: 'http://localhost:5174/blink-and-draw/',
   },
+  {
+    id: 'hand-cricket',
+    title: 'Hand Cricket',
+    category: 'multi',
+    tagline: 'The playground classic, online. Share a room code, toss odd or even, and bat against a friend anywhere.',
+    players: '2 players',
+    extras: 'Two devices',
+    icon: '/hand-cricket/favicon.svg',
+    path: '/hand-cricket/',
+    devUrl: 'http://localhost:5175/hand-cricket/',
+  },
 ];
 
 export const gameUrl = (game) => (import.meta.env.DEV ? game.devUrl : game.path);
